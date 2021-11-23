@@ -9,12 +9,12 @@ from selenium.webdriver.support import expected_conditions as EC
 options = webdriver.ChromeOptions()
 options.add_argument("--enable-javascript")
 driver = webdriver.Chrome(options=options)
-tipo_propiedad = []  # List to store tipo of the product
-sector = []  # List to store rating of the product
-precio = []  # List to store price of the product
-cant_habi = []  # List to store price of the product
-banos = []  # List to store price of the product
-espacio = []  # List to store rating of the product
+tipo_propiedad = []
+sector = []
+precio = []
+cant_habi = []
+banos = []
+espacio = []
 url = 'https://www.remaxrd.com/propiedades/q:%22%22+business:sale+perPage:24/?'
 driver.get(url)
 delay = 30
