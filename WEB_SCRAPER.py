@@ -52,4 +52,5 @@ for i in range(1,ScrollNumber):
 df = pd.DataFrame({'Tipo Propiedad': tipo_propiedad, 'Sector': sector,
                    'Precio': precio, 'Habitaciones': cant_habi,
                    'Baños': banos, 'Construccion(mt)': espacio})
+df['fecha_extraccion'] = pd.to_datetime("today")
 df.to_excel('products.xlsx', index=False, encoding='utf-8')
