@@ -34,4 +34,5 @@ while True:
 
 df = pd.DataFrame({'Tipo Propiedad': tipo_propiedad, 'Sector': sector,
                    'Precio': precio, 'Datos generales': datos_gen})
+df['fecha_extraccion'] = pd.to_datetime("today")
 df.to_excel('products_sc.xlsx', index=False, encoding='utf-8')
