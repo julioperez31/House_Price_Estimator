@@ -34,7 +34,8 @@ for i in range(1,ScrollNumber):
             habi = a.find('span', attrs={'class': 'rooms'})
             bano = a.find('span', attrs={'class': 'bathrooms'})
             tamano = a.find('span', attrs={'class': 'sqm-construction'})
-            if banos is not None and habi is not None:
+            data = [tipo, lugar, price, habi, bano, tamano]
+            if None not in data:
 
                 tipo_propiedad.append(tipo.text)
                 sector.append(lugar.text)
@@ -42,8 +43,6 @@ for i in range(1,ScrollNumber):
                 cant_habi.append(habi.text)
                 banos.append(bano.text)
                 espacio.append(tamano.text)
-
-
 
     except TimeoutException:
         print("Loading took too much time!")
